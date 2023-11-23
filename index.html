@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20190630/original/pngtree-css-file-document-icon-png-image_4177015.jpg" type="image/png">
+    <title>CSS Display Property</title>
+        
+  </head>
+
+  <body>
+    
+    <div class="left">
+      <div>
+        <h1>Inline</h1>
+        <p class="one">Sample</p>
+        <p class="two">Sample</p>
+        <p class="three">Sample</p> 
+      </div>
+
+      <div>
+        <h1>Inline-Block</h1>
+        <p class="four">Sample</p>
+        <p class="five">Sample</p>
+        <p class="six">Sample</p> 
+      </div>
+
+      <div>
+        <h1>Block</h1>
+        <p class="seven">Sample</p>
+        <p class="eight">Sample</p>
+        <p class="nine">Sample</p> 
+      </div>
+    </div>
+
+    <div class="right">
+      <script>
+        window.onload = function() {
+            var rightDiv = document.querySelector('.right');
+            var text = document.createElement('p');
+            text.style.position = 'absolute';
+            text.style.top = '40%';
+            text.style.left = '75%';
+            text.style.transform = 'translate(-50%, -50%)';
+            text.style.color = '#000';
+            text.style.fontSize = '90px';
+            rightDiv.appendChild(text);
+
+            var str = 'Css Display Property';
+            var i = 0;
+            var speed = 200; 
+
+            function typeWriter() {
+                if (i < str.length) {
+                    text.textContent += str.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            typeWriter();
+        }
+      </script>
+    </div>
+
+  </body>
+  
+</html>
